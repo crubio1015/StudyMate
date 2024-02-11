@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+	User Settings Page
+	</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/5a06a0537b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div class="container">
+		<div class="leftbox">
+			<nav>
+				<a onclick="tabs(0, '#f44336')" class="tab active">
+					<i class="fa fa-user"></i>
+				</a>
+				<a onclick="tabs(1, '#4caf50')" class="tab">
+					<i class="fa fa-tasks"></i>
+				</a>
+				<a onclick="tabs(2)" class="tab">
+					<i class="fa fa-cog"></i>
+				</a>
+			</nav>
+		</div>
+
+		<div class="rightbox">
+			<div class="profile tabShow">
+				<h1>User Information</h1>
+				<h2>Full Name</h2>
+				<input type="text" class="input" value="John Doe">
+				<h2>Birthday</h2>
+				<input type="text" class="input" value="January, 5, 1901">
+				<h2>Gender</h2>
+				<input type="text" class="input" value="Male">			
+				<h2>Email</h2>
+				<input type="text" class="input" value="example.gmail.com">
+				<h2>Password</h2>
+				<input type="password" class="input" value="bruh">
+				<button class="btn">Update</button>
+			</div>
+			<div class="privacy tabShow">
+				<h1>Privacy Info</h1>
+				<h2>Private Account</h2>
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+				<h2>Allow Notifications</h2>
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round"></span>
+				</label>
+ 				<h2>Blocked Accounts</h2>
+				<input type="text" class="input" value="Example">
+			</div>
+			<div class="settings tabShow">
+				<h1>Settings</h1>
+				<h2>Language</h2>
+				<p>English</p>
+				<h2>Log out</h2>
+				<p>Yes/No button</p>
+			</div>
+		</div>
+	</div>
+	
+	
+<script src="jquery/jquery.js"></script>
+<script>
+	const tabBtn = document.querySelectorAll(".tab");
+	const tab = document.querySelectorAll(".tabShow");
+	
+	function tabs(panelIndex) {
+		tab.forEach(function(node) {
+			node.style.display = "none";});
+		tab[panelIndex].style.display = "block";
+	}
+	tabs(0);
+	
+	$(".tab").click(function() {
+		$(this).addClass("active").siblings().removeClass("active");
+		})
+</script>
+
+</body>
+</html>

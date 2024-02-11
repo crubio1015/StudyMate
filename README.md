@@ -11,7 +11,7 @@ Notifications: Stay updated with upcoming events and invitations through real-ti
 # Technologies Used
 Frontend: HTML, CSS, JavaScript - for building a responsive and interactive user interface.
 Backend: Java, PHP - for server-side logic, database interactions, and API services.
-Database: (Specify database if used, e.g., MySQL, MongoDB) - for storing user data, event information, etc.
+Database: MySQL for storing user data, event information, etc.
 Getting Started
 # Prerequisites
 Ensure you have Java and PHP installed on your system. (Specify versions)
